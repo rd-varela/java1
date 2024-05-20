@@ -1,14 +1,83 @@
+@import "utilidades/variables";
+
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#backgroundImg{
+    display: flex;
+    z-index: 0;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../img/background.png);
+    background-repeat:repeat;
+    background-size: contain;
 }
 
 body{
     background-color: rgb(46, 0, 130);
     width: 100vw;
     height: 100vh;
+    display: flex;
+    justify-content: center;
 }
+
+header{
+    width: 100vw;
+    height: 50px;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+
+#menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    nav{
+        ul{
+            display: flex;
+            margin-top: 50px;
+            gap: 100px;
+            li{
+                list-style: none;
+                a{
+                    display: flex;
+                    background-color: $indigoDark;
+                    border: 5px outset $indigo;
+                    height: 50px;
+                    width: 100px;
+                    color: rgb(51, 244, 38);
+                    text-decoration: none;
+                    font-weight: bold;
+                    height: 50px;
+                    width: 100px;
+                    justify-content: center;
+                    align-items: center;
+                }
+                :hover{
+                    background-color: $indigoHoverDark;
+                    color: rgb(51, 244, 38);
+                    border: 5px outset $indigoHover;
+                }
+                :active{
+                    background-color: $indigoClickDark;
+                    color: rgb(51, 244, 38);
+                    border: 5px outset $indigoClick;
+                }
+            }
+        }
+    }
+}
+
+
 
 #contenido{
     background-color: white;
@@ -19,11 +88,10 @@ body{
     align-items: center;
     position: absolute;
     top: 25vh;
-    left: 35vw;
-    border: 8px outset rgb(129, 50, 255);
+    border: 8px outset $indigo;
     box-shadow: 5px 5px 15px rgb(23, 23, 23);
     max-height: 60vh;
-    max-width: 35vw;
+    min-height: 500px;
     h1{
         margin-top: 50px;
     }
@@ -42,7 +110,22 @@ body{
             margin-top: 15px;
         }
         #button{
-            margin-top: 15px;
+            margin-top: 30px;
+            text-align: center;
+        }
+        p{
+            .inputSmall{
+                width: 40px;
+            }
+            .inputButton{
+                width: 70px;
+                height: 25px;
+            }
+            input{
+                height: 30px;
+                width: 180px;
+                padding: 0px 4px;
+            }
         }
     }
 }
@@ -50,15 +133,27 @@ body{
 #resumen{
     display: none;
     background: white;
-    margin-top: 40px;
+    margin-top: 50px;
     font-weight: bold;
+    text-align: center  ;
+}
+
+#emoji{
+    margin-top: 10px;
+    font-size: 32px;
 }
 
 @media only screen and (max-width: 900px){
     #contenido{
         font-size: 0.8rem;
-        left: 15vw;
-        max-width: 70vw;
-        height: 400px;
+        max-width: 55vw;
+        height: 500px;
+    }
+    #menu{
+        nav{
+            ul{
+                gap: 50px;
+            }
+        }
     }
 }

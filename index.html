@@ -6,20 +6,45 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
+<div id="backgroundImg">
+
+</div>
+
+<header>
+    <div id="menu">
+        <nav>
+            <ul>
+                <li>
+                    <a href="">Stegovia</a>
+                </li>
+                <li>
+                    <a href="">Ribalau</a>
+                </li>
+                <li>
+                    <a href="">Jesouvie</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
 <body>
+
     <section id="contenido">
-        <h1>Formulario</h1>
+        <h1>Introduccion</h1>
         <div id="formulario">
             <form action="" onsubmit="formularioEnviar(event)">
                 <p id="label"><label for="">Nombre:</label></p>
-                <p><input type="text" name="nombre"></p>
+                <p><input type="text" name="nombre" placeholder="Juan"></p>
                 <p id="label"><label for="">Edad:</label></p>
-                <p><input type="text" name="edad"></p>
-                <p id="button"><input type="submit" value="Enviar" onsubmit="formularioEnviar()"></p>
+                <p><input type="text" name="edad" class="inputSmall" placeholder="18"></p>
+                <p id="button"><input class="inputButton" type="submit" value="Enviar" onsubmit="formularioEnviar()"></p>
             </form>
         </div>
         <div id="resumen">
             <p>Tu nombre es <span id="nombreUs"></span> y tenés <span id="edadUs"></span> años</p>
+            <p id="emoji">&#128526</p>
         </div>
     </section>
 

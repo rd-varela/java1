@@ -11,5 +11,3 @@ function formularioEnviar(){
 
     document.getElementById("resumen").style.display = "block";
 }
-
-console.log(nombre);
