@@ -11,3 +11,25 @@ function formularioEnviar(){
 
     document.getElementById("resumen").style.display = "block";
 }
+
+function insert(num){
+    document.calc.calcView.value = document.calc.calcView.value + num;
+}
+
+function checkEnter(event) {
+    if (event.keyCode === 13) {
+      equal();
+    }
+}
+
+function equal(){
+    event.preventDefault();
+    let res = document.calc.calcView.value;
+    if(res){
+        //document.calc.calcView.value = eval(res)
+        document.calc.calcView.value = Math.floor(Math.random()*(9999-1)+1)
+    }
+    else{
+        document.calc.calcView.value = "NaN"
+    }
+}

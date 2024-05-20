@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahh</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<div id="backgroundImg">
+
+</div>
+
+<header>
+    <div id="menu">
+        <nav>
+            <ul>
+                <li>
+                    <a href="../index.html">Stegovia</a>
+                </li>
+                <li>
+                    <a href="calc.html">Ribalau</a>
+                </li>
+                <li>
+                    <a href="jesu.html">Jesouvie</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<body>
+    <section class="contenido" id="calcContent">
+        <div id="calcOut">
+            <div id="calcResult"><form name="calc"><input class="calcResultForm" name="calcView" onkeydown="checkEnter(event)"></form></div>
+            <div id="calcOne"><input type="button" class="calcBtn" value="1" onclick="insert(1)"></div>
+            <div id="calcTwo"><input type="button" class="calcBtn" value="2" onclick="insert(2)"></div>
+            <div id="calcThree"><input type="button" class="calcBtn" value="3" onclick="insert(3)"></div>
+            <div id="calcFour"><input type="button" class="calcBtn" value="4" onclick="insert(4)"></div>
+            <div id="calcFive"><input type="button" class="calcBtn" value="5" onclick="insert(5)"></div>
+            <div id="calcSix"><input type="button" class="calcBtn" value="6" onclick="insert(6)"></div>
+            <div id="calcSeven"><input type="button" class="calcBtn" value="7" onclick="insert(7)"></div>
+            <div id="calcEight"><input type="button" class="calcBtn" value="8" onclick="insert(8)"></div>
+            <div id="calcNine"><input type="button" class="calcBtn" value="9" onclick="insert(9)"></div>
+            <div id="calcZero"><input type="button" class="calcBtn" value="0" onclick="insert(0)"></div>
+            <div id="calcPlus"><input type="button" class="calcBtn" value="+" onclick="insert('+')"></div>
+            <div id="calcMinus"><input type="button" class="calcBtn" value="-" onclick="insert('-')"></div>
+            <div id="calcDiv"><input type="button" class="calcBtn" value="/" onclick="insert('/')"></div>
+            <div id="calcMult"><input type="button" class="calcBtn" value="X" onclick="insert('*')"></div>
+            <div id="calcEqual"><input type="button" class="calcBtn" value="=" onclick="equal()"></div>
+            <div id="calcClear"><input type="button" class="calcBtn" value="C" onclick="calc.calcView.value=''"></div>
+        </div>
+    </section>
+
+    <script async src="../script/script.js"></script>
+</body>
+
+</html>

@@ -79,7 +79,7 @@ header{
 
 
 
-#contenido{
+.contenido{
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -143,10 +143,127 @@ header{
     font-size: 32px;
 }
 
+#calcContent{
+    justify-content: center;
+}
+
+#calcResult{
+    grid-area: calcResult;
+}
+
+#calcOne{
+    grid-area: calcOne;
+}
+
+#calcTwo{
+    grid-area: calcTwo;
+}
+
+#calcThree{
+    grid-area: calcThree;
+}
+
+#calcFour{
+    grid-area: calcFour;
+}
+
+#calcFive{
+    grid-area: calcFive;
+}
+
+#calcSix{
+    grid-area: calcSix;
+}
+
+#calcSeven{
+    grid-area: calcSeven;
+}
+
+#calcEight{
+    grid-area: calcEight;
+}
+
+#calcNine{
+    grid-area: calcNine;
+}
+
+#calcZero{
+    grid-area: calcZero;
+}
+
+#calcPlus{
+    grid-area: calcPlus;
+}
+
+#calcMinus{
+    grid-area: calcMinus;
+}
+
+#calcDiv{
+    grid-area:calcDiv;
+}
+
+#calcMult{
+    grid-area: calcMult;
+}
+
+#calcEqual{
+    grid-area: calcEqual;
+}
+
+#calcClear{
+    grid-area:calcClear;
+}
+
+#calcOut{
+    display: grid;
+    background-color: $indigoDark;
+    border: 3px $indigoClick solid;
+    border-radius: 3%;
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.557);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+    'calcResult calcResult calcResult calcResult'
+    'calcSeven calcEight calcNine calcDiv'
+    'calcFour calcFive calcSix calcMult'
+    'calcOne calcTwo calcThree calcMinus'
+    'calcZero calcClear calcEqual calcPlus';
+    height: 430px;
+    width: 320px;
+    text-align: center;
+    align-items: center;
+}
+
+#calcResult{
+    :focus{
+        outline: none;
+    }
+}
+
+.calcResultForm{
+    width: 250px;
+    height: 60px;
+    font-size: 34px;
+    margin-top: 20px;
+    padding: 0px 10px;
+    background-color: rgb(255, 252, 74);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.838);
+}
+
+.calcBtn{
+    width: 45px;
+    height: 48px;
+    font-size: 22px;
+    background-color: $indigoHoverDark;
+    color: white;
+    font-weight: bold;
+}
+
 @media only screen and (max-width: 900px){
-    #contenido{
-        font-size: 0.8rem;
-        max-width: 55vw;
+    .contenido{
+        font-size: 0.9rem;
+        max-width: 80vw;
         height: 500px;
     }
     #menu{
@@ -155,5 +272,18 @@ header{
                 gap: 50px;
             }
         }
+    }
+
+    #calcOut{
+        height: 430px;
+        width: 280px;
+    }
+
+    .calcResultForm{
+        font-size: 26px;
+    }
+
+    .calcBtn{
+        font-size: 18px;
     }
 }
