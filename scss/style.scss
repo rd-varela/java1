@@ -1,0 +1,64 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(46, 0, 130);
+    width: 100vw;
+    height: 100vh;
+}
+
+#contenido{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 500px;
+    align-items: center;
+    position: absolute;
+    top: 25vh;
+    left: 35vw;
+    border: 8px outset rgb(129, 50, 255);
+    box-shadow: 5px 5px 15px rgb(23, 23, 23);
+    max-height: 60vh;
+    max-width: 35vw;
+    h1{
+        margin-top: 50px;
+    }
+}
+
+#formulario{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin-top: 50px;
+    form{
+        display: flex;
+        flex-direction: column;
+        row-gap: 3px;
+        #label{
+            margin-top: 15px;
+        }
+        #button{
+            margin-top: 15px;
+        }
+    }
+}
+
+#resumen{
+    display: none;
+    background: white;
+    margin-top: 40px;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 900px){
+    #contenido{
+        font-size: 0.8rem;
+        left: 15vw;
+        max-width: 70vw;
+        height: 400px;
+    }
+}

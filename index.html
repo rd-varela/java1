@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section id="contenido">
+        <h1>Formulario</h1>
+        <div id="formulario">
+            <form action="" onsubmit="formularioEnviar(event)">
+                <p id="label"><label for="">Nombre:</label></p>
+                <p><input type="text" name="nombre"></p>
+                <p id="label"><label for="">Edad:</label></p>
+                <p><input type="text" name="edad"></p>
+                <p id="button"><input type="submit" value="Enviar" onsubmit="formularioEnviar()"></p>
+            </form>
+        </div>
+        <div id="resumen">
+            <p>Tu nombre es <span id="nombreUs"></span> y tenés <span id="edadUs"></span> años</p>
+        </div>
+    </section>
+
+    <script async src="script/script.js"></script>
+</body>
+</html>
