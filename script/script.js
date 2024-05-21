@@ -39,21 +39,23 @@ let day = date.getDay();
 
 function check(){
     event.preventDefault();
-    let dayCheck = "Si";
+    let dayCheck = "";
+    let dayCheckSi = "";
     let dayTil = 4 - day;
     let dayTilPast = dayTil + 7
     if(day==4){
-        dayCheck = "Si";
+        dayCheckSi = "SI !";
+        document.getElementById("juevesCheckerSi").style.visibility = "visible";
     }
     else if(day>4){
-        dayCheck = "No, faltan " + dayTilPast + " días para el jueves" 
+        dayCheck = "No, faltan " + dayTilPast + " dias para el jueves" 
     }
     else if(day==3){
         dayCheck = "No, mañana es jueves"
     }
     else{
-        dayCheck = "No, faltan " + dayTil + " días para el jueves"
+        dayCheck = "No, faltan " + dayTil + " dias para el jueves"
     }
-    console.log(dayCheck)
     document.getElementById("juevesChecker").innerHTML = dayCheck;
+    document.getElementById("juevesCheckerSi").innerHTML = dayCheckSi;
 }

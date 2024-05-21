@@ -1,10 +1,22 @@
+@font-face {
+  font-family: Symtext;
+  src: url(../font/Pixeltype.ttf);
+}
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Symtext;
 }
 
+@keyframes animatedBg {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 5000px 1000px;
+  }
+}
 #backgroundImg {
   display: flex;
   z-index: 0;
@@ -16,6 +28,7 @@
   background-image: url(../img/background2.png);
   background-repeat: repeat;
   background-size: contain;
+  animation: animatedBg 160s alternate infinite;
 }
 
 body {
@@ -61,6 +74,8 @@ header {
   width: 100px;
   justify-content: center;
   align-items: center;
+  font-size: 28px;
+  box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.724);
 }
 #menu nav ul li :hover {
   background-color: rgb(129, 50, 255);
@@ -71,6 +86,7 @@ header {
   background-color: rgb(34, 0, 90);
   color: rgb(51, 244, 38);
   border: 5px outset rgb(85, 0, 223);
+  padding-top: 2px;
 }
 
 .contenido {
@@ -89,6 +105,7 @@ header {
 }
 .contenido h1 {
   margin-top: 50px;
+  font-size: 48px;
 }
 
 #formulario {
@@ -104,6 +121,7 @@ header {
 }
 #formulario form #label {
   margin-top: 15px;
+  font-size: 28px;
 }
 #formulario form #button {
   margin-top: 30px;
@@ -120,6 +138,7 @@ header {
   height: 30px;
   width: 180px;
   padding: 0px 4px;
+  font-size: 24px;
 }
 
 #resumen {
@@ -128,6 +147,7 @@ header {
   margin-top: 50px;
   font-weight: bold;
   text-align: center;
+  font-size: 28px;
 }
 
 #emoji {
@@ -210,7 +230,7 @@ header {
 #calcOut {
   display: grid;
   background-color: rgb(97, 24, 213);
-  border: 3px rgb(85, 0, 223) solid;
+  border: 10px rgb(85, 0, 223) outset;
   border-radius: 3%;
   box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.557);
   grid-template-rows: repeat(5, 1fr);
@@ -220,6 +240,9 @@ header {
   width: 320px;
   text-align: center;
   align-items: center;
+}
+#calcOut :active {
+  padding-top: 2px;
 }
 
 #calcResult :focus {
@@ -234,12 +257,13 @@ header {
   padding: 0px 10px;
   background-color: rgb(255, 252, 74);
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.838);
+  font-size: 50px;
 }
 
 .calcBtn {
   width: 45px;
   height: 48px;
-  font-size: 22px;
+  font-size: 32px;
   background-color: rgb(129, 50, 255);
   color: white;
   font-weight: bold;
@@ -255,15 +279,75 @@ header {
 #juevesCheckerBtn input {
   width: 150px;
   height: 80px;
-  font-size: 24px;
+  font-size: 36px;
   font-weight: bold;
   background-color: rgb(129, 50, 255);
   color: rgb(51, 244, 38);
+  border: 8px rgb(129, 50, 255) inset;
+}
+#juevesCheckerBtn :active {
+  border: 12px rgb(85, 0, 223) inset;
+  background-color: rgb(97, 24, 213);
+  color: rgb(48, 224, 36);
+  padding-top: 2px;
 }
 
 #juevesChecker {
   margin-top: 50px;
   font-weight: bold;
+  font-size: 32px;
+}
+
+@keyframes juevesSi {
+  0% {
+    color: yellow;
+    box-shadow: 0px 0px 15px 6px rgba(255, 0, 0, 0.838);
+  }
+  10% {
+    color: green;
+  }
+  20% {
+    color: rgb(255, 0, 0);
+    box-shadow: 0px 0px 15px 6px rgb(21, 255, 0);
+  }
+  30% {
+    color: blue;
+  }
+  40% {
+    color: orange;
+  }
+  50% {
+    color: violet;
+    box-shadow: 0px 0px 15px 6px rgb(255, 251, 0);
+  }
+  60% {
+    color: grey;
+  }
+  70% {
+    color: rgb(250, 91, 91);
+  }
+  80% {
+    color: rgb(153, 255, 0);
+    box-shadow: 0px 0px 15px 6px rgb(17, 0, 255);
+  }
+  90% {
+    color: rgb(255, 0, 153);
+  }
+  100% {
+    color: rgb(194, 255, 51);
+    box-shadow: 0px 0px 15px 6px rgba(255, 0, 0, 0.838);
+  }
+}
+#juevesCheckerSi {
+  visibility: hidden;
+  font-weight: bolder;
+  animation-name: juevesSi;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  font-size: 80px;
+  border-radius: 40%;
+  padding: 30px 25px 20px 25px;
+  background-color: black;
 }
 
 @media only screen and (max-width: 900px) {
