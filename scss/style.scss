@@ -94,7 +94,7 @@ header{
 
 
 .contenido{
-    background-color: white;
+    background-color: $cloudWisp;
     display: flex;
     flex-direction: column;
     width: 500px;
@@ -115,7 +115,7 @@ header{
 #formulario{
     display: flex;
     flex-direction: column;
-    background-color: white;
+    background-color: rgba(0, 0, 0, 0);
     margin-top: 50px;
     form{
         display: flex;
@@ -149,7 +149,7 @@ header{
 
 #resumen{
     display: none;
-    background: white;
+    background: rgba(255, 255, 255, 0);
     margin-top: 50px;
     font-weight: bold;
     text-align: center  ;
@@ -337,7 +337,56 @@ header{
     background-color: black;
 }
 
+footer{
+    display:flex;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 20px;
+    input{
+        background-color: $cloudWisp ;
+        border: 2px solid $cloudWisp;
+    }
+}
 
+#darkModeBtn{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+}
+
+.darkModeContainer{
+    background-color: rgb(24, 24, 24);
+    color: $cloudWisp;
+    border: 8px outset $indigoDarkMode;
+    box-shadow: 5px 5px 15px rgb(0, 0, 0);
+}
+
+.darkModeBg{
+    background-color: rgba(0, 0, 0, 0.765);
+}
+
+.darkModeMenu{
+    nav{
+        ul{
+            li{
+                a{
+                    background-color: $indigoDarkMode !important;
+                    border: 5px outset $indigoDarkModeBorder !important;
+                    box-shadow: 1px 1px 4px 1px rgb(0, 0, 0);
+                }
+                :hover{
+                    background-color: $indigoHoverDark !important;
+                    border: 5px outset $indigoHover !important;
+                }
+                :active{
+                    background-color: $indigoClickDark !important;
+                    border: 5px outset $indigoClick !important;
+                }
+            }
+        }
+    }
+}
 
 @media only screen and (max-width: 900px){
     .contenido{

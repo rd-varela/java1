@@ -59,3 +59,14 @@ function check(){
     document.getElementById("juevesChecker").innerHTML = dayCheck;
     document.getElementById("juevesCheckerSi").innerHTML = dayCheckSi;
 }
+
+function darkMode(){
+    let contenido = document.querySelector(".contenido");
+    let fondo = document.getElementById("backgroundImg");
+    let menu = document.getElementById("menu");
+    let darkModeBtn = document.getElementById("darkModeBtn");
+    contenido.classList.toggle("darkModeContainer");
+    fondo.classList.toggle("darkModeBg");
+    menu.classList.toggle("darkModeMenu");
+    darkModeBtn.classList.toggle("darkModeBg");
+}
