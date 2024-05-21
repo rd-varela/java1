@@ -15,7 +15,7 @@
     left: 0px;
     width: 100vw;
     height: 100vh;
-    background-image: url(../img/background.png);
+    background-image: url(../img/background2.png);
     background-repeat:repeat;
     background-size: contain;
 }
@@ -54,7 +54,7 @@ header{
                     border: 5px outset $indigo;
                     height: 50px;
                     width: 100px;
-                    color: rgb(51, 244, 38);
+                    color: $greenText;
                     text-decoration: none;
                     font-weight: bold;
                     height: 50px;
@@ -257,6 +257,27 @@ header{
     font-size: 22px;
     background-color: $indigoHoverDark;
     color: white;
+    font-weight: bold;
+}
+
+#jesouvie{
+    padding-top: 50px;
+}
+
+#juevesCheckerBtn{
+    margin-top: 50px;
+    input{
+        width: 150px;
+        height: 80px;
+        font-size: 24px;
+        font-weight: bold;
+        background-color: $indigoHoverDark;
+        color: $greenText;
+    }
+}
+
+#juevesChecker{
+    margin-top: 50px;
     font-weight: bold;
 }
 

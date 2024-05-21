@@ -13,7 +13,7 @@
   left: 0px;
   width: 100vw;
   height: 100vh;
-  background-image: url(../img/background.png);
+  background-image: url(../img/background2.png);
   background-repeat: repeat;
   background-size: contain;
 }
@@ -242,6 +242,27 @@ header {
   font-size: 22px;
   background-color: rgb(129, 50, 255);
   color: white;
+  font-weight: bold;
+}
+
+#jesouvie {
+  padding-top: 50px;
+}
+
+#juevesCheckerBtn {
+  margin-top: 50px;
+}
+#juevesCheckerBtn input {
+  width: 150px;
+  height: 80px;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: rgb(129, 50, 255);
+  color: rgb(51, 244, 38);
+}
+
+#juevesChecker {
+  margin-top: 50px;
   font-weight: bold;
 }
 

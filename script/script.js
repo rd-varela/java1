@@ -1,5 +1,5 @@
-let nombre = document.getElementsByName("nombre")[0].value;
-let edad = document.getElementsByName("edad")[0].value;
+let nombre = document.getElementsByName("nombre")[0];
+let edad = document.getElementsByName("edad")[0];
 
 function formularioEnviar(){
     event.preventDefault();
@@ -32,4 +32,28 @@ function equal(){
     else{
         document.calc.calcView.value = "NaN"
     }
+}
+
+let date = new Date();
+let day = date.getDay();
+
+function check(){
+    event.preventDefault();
+    let dayCheck = "Si";
+    let dayTil = 4 - day;
+    let dayTilPast = dayTil + 7
+    if(day==4){
+        dayCheck = "Si";
+    }
+    else if(day>4){
+        dayCheck = "No, faltan " + dayTilPast + " días para el jueves" 
+    }
+    else if(day==3){
+        dayCheck = "No, mañana es jueves"
+    }
+    else{
+        dayCheck = "No, faltan " + dayTil + " días para el jueves"
+    }
+    console.log(dayCheck)
+    document.getElementById("juevesChecker").innerHTML = dayCheck;
 }
