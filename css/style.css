@@ -132,13 +132,37 @@ header {
 }
 #formulario form p .inputButton {
   width: 70px;
-  height: 25px;
+  height: 35px;
 }
 #formulario form p input {
   height: 30px;
   width: 180px;
-  padding: 0px 4px;
+  padding: 4px 4px 0px 4px;
   font-size: 24px;
+}
+
+.inputButton {
+  display: flex;
+  background-color: rgb(97, 24, 213);
+  border: 5px outset rgb(129, 50, 255);
+  height: 50px;
+  width: 100px;
+  color: rgb(51, 244, 38);
+  text-decoration: none;
+  font-weight: bold;
+  height: 50px;
+  width: 100px;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.724);
+}
+
+#formText {
+  border: 2px solid black;
+  border-radius: 0%;
+  background-color: rgb(218, 241, 218);
+  color: black;
 }
 
 #resumen {
@@ -258,6 +282,7 @@ header {
   background-color: rgb(255, 252, 74);
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.838);
   font-size: 50px;
+  text-align: right;
 }
 
 .calcBtn {
@@ -267,6 +292,17 @@ header {
   background-color: rgb(129, 50, 255);
   color: white;
   font-weight: bold;
+}
+
+#dominatrixImg {
+  visibility: hidden;
+  position: fixed;
+  top: 25%;
+  z-index: 2;
+  pointer-events: none;
+}
+#dominatrixImg img {
+  opacity: 0.3;
 }
 
 #jesouvie {
@@ -369,7 +405,7 @@ footer input {
 }
 
 .darkModeContainer {
-  background-color: rgb(24, 24, 24);
+  background-color: rgb(34, 0, 90);
   color: #F1FAFF;
   border: 8px outset rgb(41, 14, 83);
   box-shadow: 5px 5px 15px rgb(0, 0, 0);
@@ -407,10 +443,10 @@ footer input {
     width: 280px;
   }
   .calcResultForm {
-    font-size: 26px;
+    font-size: 46px;
   }
   .calcBtn {
-    font-size: 18px;
+    font-size: 26px;
   }
 }
 

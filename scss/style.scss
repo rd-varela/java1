@@ -135,16 +135,40 @@ header{
             }
             .inputButton{
                 width: 70px;
-                height: 25px;
+                height: 35px;
             }
             input{
                 height: 30px;
                 width: 180px;
-                padding: 0px 4px;
+                padding: 4px 4px 0px 4px;
                 font-size: 24px;
             }
         }
     }
+}
+
+.inputButton{
+    display: flex;
+    background-color: $indigoDark;
+    border: 5px outset $indigo;
+    height: 50px;
+    width: 100px;
+    color: $greenText;
+    text-decoration: none;
+    font-weight: bold;
+    height: 50px;
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.724);
+}
+
+#formText{
+    border: 2px solid black;
+    border-radius: 0%;
+    background-color: rgb(218, 241, 218);
+    color: black;
 }
 
 #resumen{
@@ -271,6 +295,7 @@ header{
     background-color: rgb(255, 252, 74);
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.838);
     font-size: 50px;
+    text-align: right;
 }
 
 .calcBtn{
@@ -280,6 +305,17 @@ header{
     background-color: $indigoHoverDark;
     color: white;
     font-weight: bold;
+}
+
+#dominatrixImg{
+    visibility: hidden;
+    position: fixed;
+    top: 25%;
+    z-index: 2;
+    pointer-events: none;
+    img{
+        opacity: 0.3;
+    }
 }
 
 #jesouvie{
@@ -356,7 +392,7 @@ footer{
 }
 
 .darkModeContainer{
-    background-color: rgb(24, 24, 24);
+    background-color: $indigoClickDark;
     color: $cloudWisp;
     border: 8px outset $indigoDarkMode;
     box-shadow: 5px 5px 15px rgb(0, 0, 0);
@@ -408,10 +444,10 @@ footer{
     }
 
     .calcResultForm{
-        font-size: 26px;
+        font-size: 46px;
     }
 
     .calcBtn{
-        font-size: 18px;
+        font-size: 26px;
     }
 }

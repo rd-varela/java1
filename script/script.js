@@ -25,12 +25,21 @@ function checkEnter(event) {
 function equal(){
     event.preventDefault();
     let res = document.calc.calcView.value;
+
     if(res){
-        //document.calc.calcView.value = eval(res)
-        document.calc.calcView.value = Math.floor(Math.random()*(9999-1)+1)
+        document.calc.calcView.value = eval(res)
+        //document.calc.calcView.value = Math.floor(Math.random()*(9999-1)+1)
     }
     else{
         document.calc.calcView.value = "NaN"
+    }
+
+    if(res==69){
+        document.getElementById("dominatrixImg").style.visibility = "visible";
+    }
+
+    if(res!=69){
+        document.getElementById("dominatrixImg").style.visibility = "hidden";
     }
 }
 
